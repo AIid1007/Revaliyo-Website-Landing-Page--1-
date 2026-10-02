@@ -22,10 +22,9 @@ All in `lib/config.ts` unless noted:
 
 ## Placeholder images
 
-`public/images/hiw-list.jpg`, `hiw-swap.jpg`, `hiw-collect.jpg` and `film-poster.jpg` are currently **flat-colour stand-ins**.
-AI-generated placeholder photos for them exist in the Higgsfield library of the account used in the session, but this
-environment's network policy blocked downloading them. Drop real or generated photos at those paths (4:5 for the three
-how-it-works images, 16:9 for the poster) and update the alt text in `components/HowItWorks.tsx`.
+`hiw-list.jpg`, `hiw-swap.jpg` and `film-poster.jpg` in `public/images/` are AI-generated stand-ins.
+`hiw-collect.jpg` (the neighbour handover) is still a **flat-colour placeholder**; replace it with a 4:5 photo.
+Update the alt text in `components/HowItWorks.tsx` if you change any of them.
 
 ## Copy still marked `[TBC: ...]` on the page
 
