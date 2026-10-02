@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { useReducedMotion } from "@/lib/useReducedMotion";
+import { motion } from "motion/react";
 
 /** Fade-and-rise on entering the viewport. Hierarchy: content arrives in reading order. */
 export default function Reveal({

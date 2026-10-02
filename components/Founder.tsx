@@ -1,13 +1,8 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useRef } from "react";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-  type MotionValue,
-} from "motion/react";
+import { motion, useScroll, useTransform, type MotionValue } from "motion/react";
 
 const TEXT =
   "Revaliyo was built on a simple idea: most of what we throw away still has life left in it, and someone nearby actually wants it. We’re here to make swapping as easy as buying new, and a lot better for the planet.";

@@ -1,7 +1,8 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import {
   Bicycle,
   Books,

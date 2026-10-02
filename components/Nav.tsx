@@ -1,13 +1,8 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useReducedMotion,
-  useScroll,
-} from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { List, X } from "@phosphor-icons/react";
 import { NAV_LINKS } from "@/lib/config";
 import { scrollToHash } from "@/lib/lenis";

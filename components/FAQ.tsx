@@ -1,7 +1,8 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useId, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Plus } from "@phosphor-icons/react";
 import { LINKS } from "@/lib/config";
 import Tbc from "./Tbc";

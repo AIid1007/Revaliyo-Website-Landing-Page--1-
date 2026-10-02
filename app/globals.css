@@ -196,16 +196,21 @@ body {
   }
   .marquee-track {
     animation: none;
+    display: block;
     width: auto;
-    justify-content: center;
   }
   .marquee-dup,
   .marquee-run > span:nth-child(n + 2) {
     display: none;
   }
   .marquee-run {
+    flex-shrink: 1;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
+  }
+  .marquee-run svg {
+    display: none;
   }
   .marquee-run span {
     white-space: normal;
