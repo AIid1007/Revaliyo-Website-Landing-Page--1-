@@ -15,10 +15,17 @@ All in `lib/config.ts` unless noted:
 
 | What | Where |
 | --- | --- |
-| App Store / Google Play URLs (currently `#`) | `STORE_LINKS` |
+| App Store / Google Play URLs (set) | `STORE_LINKS` |
 | Explainer film (YouTube/Vimeo embed URL, optional poster) | `FILM` |
-| Privacy, T&Cs, banned-items list, full "how it works" page links (currently `#`) | `LINKS` |
+| Privacy and Terms links (set). Banned-items list link is still `#` | `LINKS` |
 | Email sign-ups. Set `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT` in `.env.local` to a URL that accepts `POST {"email": "..."}`. Without it the form validates and shows success but **stores nothing**. | `SUBSCRIBE` |
+
+## Placeholder images
+
+`public/images/hiw-list.jpg`, `hiw-swap.jpg`, `hiw-collect.jpg` and `film-poster.jpg` are currently **flat-colour stand-ins**.
+AI-generated placeholder photos for them exist in the Higgsfield library of the account used in the session, but this
+environment's network policy blocked downloading them. Drop real or generated photos at those paths (4:5 for the three
+how-it-works images, 16:9 for the poster) and update the alt text in `components/HowItWorks.tsx`.
 
 ## Copy still marked `[TBC: ...]` on the page
 

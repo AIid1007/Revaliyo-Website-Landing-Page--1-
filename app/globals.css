@@ -135,6 +135,40 @@ body {
   }
 }
 
+/* ---------- How it works: stacked by default, pinned sideways on desktop ---------- */
+.hiw[data-mode="pin"] {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.hiw[data-mode="pin"] .hiw-head {
+  width: 100%;
+  padding-top: 5.5rem;
+  padding-bottom: 1rem;
+}
+.hiw[data-mode="pin"] .hiw-head h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+.hiw[data-mode="pin"] .hiw-pin-only {
+  display: flex;
+}
+.hiw[data-mode="pin"] .hiw-viewport {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.hiw[data-mode="pin"] .hiw-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  will-change: transform;
+}
+.hiw[data-mode="pin"] .hiw-panel {
+  width: 100vw;
+  height: 100%;
+}
+
 /* ---------- Marquee (the only one on the page) ---------- */
 @keyframes marquee {
   to {

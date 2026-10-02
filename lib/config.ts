@@ -4,17 +4,15 @@
  */
 
 export const STORE_LINKS = {
-  // TODO: replace "#" with the live store URLs once the listings exist.
-  appStore: "#",
-  googlePlay: "#",
+  appStore: "https://apps.apple.com/gb/app/revaliyo/id6762087168",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.baryonminds.revaliyo&pcampaignid=web_share",
 } as const;
 
 export const LINKS = {
-  // TODO: point these at the real pages.
-  fullBreakdown: "#",
+  // TODO: still to be provided.
   bannedItems: "#",
-  terms: "#",
-  privacy: "#",
+  terms: "https://www.baryonminds.com/products/revaliyo/terms",
+  privacy: "https://www.baryonminds.com/products/revaliyo/privacy",
 } as const;
 
 export const FILM = {
@@ -25,7 +23,7 @@ export const FILM = {
    */
   embedUrl: "",
   /** Optional poster image in /public, e.g. "/film-poster.jpg". */
-  poster: "",
+  poster: "/images/film-poster.jpg",
 } as const;
 
 export const SUBSCRIBE = {

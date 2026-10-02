@@ -68,6 +68,10 @@ export default function Film() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               )}
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-[linear-gradient(to_top,rgb(8_12_9/0.7),rgb(8_12_9/0.15)_55%,rgb(8_12_9/0.45))]"
+              />
               <div className="absolute inset-0 flex flex-col items-start justify-between p-6 md:p-10">
                 <p className="display max-w-[12ch] text-[clamp(2rem,6vw,5.5rem)] text-on-panel">
                   Watch the film
