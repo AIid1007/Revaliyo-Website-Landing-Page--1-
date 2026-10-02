@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+/* ---------- Tokens ----------
+   One accent (lime) on a cool paper/ink pair. Light by default, follows the
+   system dark setting. Semantic tokens only; components never use raw hex. */
+:root {
+  --paper: #eceee9;
+  --paper-2: #dfe3da;
+  --ink: #101511;
+  --muted: #444c45;
+  --line: rgb(16 21 17 / 0.16);
+  --lime: #c2ea3f;
+  --on-lime: #101511;
+  --panel: #151a15;
+  --on-panel: #eceee9;
+  --on-panel-muted: #b6bdb2;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --radius-panel: 28px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0d110e;
+    --paper-2: #171d18;
+    --ink: #ebeee6;
+    --muted: #a8b0a4;
+    --line: rgb(235 238 230 / 0.16);
+    --panel: #1d251e;
+    --on-panel: #ebeee6;
+    --on-panel-muted: #a8b0a4;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-lime: var(--lime);
+  --color-on-lime: var(--on-lime);
+  --color-panel: var(--panel);
+  --color-on-panel: var(--on-panel);
+  --color-on-panel-muted: var(--on-panel-muted);
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --radius-panel: 28px;
+}
+
+/* ---------- Base ---------- */
+html {
+  background: var(--paper);
+  color-scheme: light dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--on-lime);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.on-dark :focus-visible,
+.on-lime :focus-visible {
+  outline-color: currentColor;
+}
+
+/* Display type: tight, heavy, optical-size aware */
+.display {
+  font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  font-variation-settings: "opsz" 96;
+}
+
+/* Lime highlighter swipe behind a word */
+.mark {
+  background-image: linear-gradient(var(--lime), var(--lime));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 0.34em;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mark {
+    background: none;
+    color: var(--lime);
+  }
+}
+
+/* Grain: fixed, non-interactive, never on a scrolling container */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-color-scheme: dark) {
+  .grain::after {
+    opacity: 0.1;
+    mix-blend-mode: screen;
+  }
+}
+
+/* ---------- How it works: stacked by default, pinned sideways on desktop ---------- */
+.hiw[data-mode="pin"] {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.hiw[data-mode="pin"] .hiw-head {
+  width: 100%;
+  padding-top: 5.5rem;
+  padding-bottom: 1rem;
+}
+.hiw[data-mode="pin"] .hiw-head h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+.hiw[data-mode="pin"] .hiw-pin-only {
+  display: flex;
+}
+.hiw[data-mode="pin"] .hiw-viewport {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.hiw[data-mode="pin"] .hiw-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  will-change: transform;
+}
+.hiw[data-mode="pin"] .hiw-panel {
+  width: 100vw;
+  height: 100%;
+}
+
+/* ---------- Marquee (the only one on the page) ---------- */
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---------- Reduced motion: everything collapses to static ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none;
+    display: block;
+    width: auto;
+  }
+  .marquee-dup,
+  .marquee-run > span:nth-child(n + 2) {
+    display: none;
+  }
+  .marquee-run {
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .marquee-run svg {
+    display: none;
+  }
+  .marquee-run span {
+    white-space: normal;
+    text-align: center;
+  }
+}

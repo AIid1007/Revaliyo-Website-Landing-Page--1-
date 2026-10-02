@@ -1,0 +1,43 @@
+import { LINKS } from "@/lib/config";
+import EmailForm from "./EmailForm";
+import Logo from "./Logo";
+import StoreButtons from "./StoreButtons";
+
+export default function Footer() {
+  return (
+    <footer id="get-the-app" className="px-3 pb-3 md:px-6 md:pb-6">
+      <div className="on-dark mx-auto max-w-[1400px] overflow-hidden rounded-[28px] bg-panel px-6 pb-8 pt-16 text-on-panel md:px-12 md:pt-24">
+        <div className="grid gap-14 lg:grid-cols-[1.25fr_1fr] lg:gap-10">
+          <div>
+            <h2 className="display text-[clamp(2.6rem,6.4vw,6rem)]">
+              Swap the things you don&rsquo;t use.
+            </h2>
+            <div className="mt-8">
+              <StoreButtons tone="lime" />
+            </div>
+          </div>
+          <div className="lg:justify-self-end">
+            <EmailForm />
+          </div>
+        </div>
+
+        <div className="mt-20 flex flex-col gap-6 border-t border-white/15 pt-6 text-sm text-on-panel-muted md:mt-28 md:flex-row md:items-center md:justify-between">
+          <Logo className="text-on-panel" />
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <a href={LINKS.privacy} className="underline-offset-4 hover:underline">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href={LINKS.terms} className="underline-offset-4 hover:underline">
+                Terms &amp; Conditions
+              </a>
+            </li>
+          </ul>
+          <p>&copy; {new Date().getFullYear()} Revaliyo</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
