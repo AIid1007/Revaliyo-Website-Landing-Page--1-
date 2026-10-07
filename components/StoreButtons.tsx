@@ -2,11 +2,11 @@ import { AppleLogo, GooglePlayLogo } from "@phosphor-icons/react/dist/ssr";
 import { STORE_LINKS } from "@/lib/config";
 import Magnetic from "./Magnetic";
 
-type Tone = "ink" | "lime" | "paper";
+type Tone = "gold" | "blue" | "paper";
 
 const tones: Record<Tone, string> = {
-  ink: "bg-ink text-paper",
-  lime: "bg-lime text-on-lime",
+  gold: "bg-gold text-on-gold",
+  blue: "bg-blue text-on-blue",
   paper: "bg-paper text-ink",
 };
 
@@ -42,7 +42,7 @@ function Btn({
 }
 
 /** Same two actions everywhere they appear: hero and footer. */
-export default function StoreButtons({ tone = "ink" }: { tone?: Tone }) {
+export default function StoreButtons({ tone = "gold" }: { tone?: Tone }) {
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
       <Btn

@@ -53,7 +53,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div {...rise(0.65)} className="mt-8">
-          <StoreButtons tone="ink" />
+          <StoreButtons tone="gold" />
         </motion.div>
       </div>
 

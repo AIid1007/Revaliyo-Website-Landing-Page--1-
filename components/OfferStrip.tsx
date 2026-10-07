@@ -22,7 +22,7 @@ export default function OfferStrip() {
   return (
     <section
       aria-label="Offer"
-      className="on-lime marquee overflow-hidden bg-lime py-6 text-on-lime md:py-8"
+      className="on-blue marquee overflow-hidden bg-blue py-6 text-on-blue md:py-8"
     >
       <p className="sr-only">{MESSAGE}</p>
       <div className="marquee-track">

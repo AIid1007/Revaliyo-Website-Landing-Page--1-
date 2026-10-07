@@ -102,7 +102,7 @@ function Item({ q, a, defaultOpen = false }: { q: string; a: React.ReactNode; de
           </span>
           <span
             aria-hidden
-            className={`grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ink text-paper transition-transform duration-300 ease-[var(--ease-out)] group-active:scale-90 ${
+            className={`grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-on-gold transition-transform duration-300 ease-[var(--ease-out)] group-active:scale-90 ${
               open ? "rotate-45" : ""
             }`}
           >

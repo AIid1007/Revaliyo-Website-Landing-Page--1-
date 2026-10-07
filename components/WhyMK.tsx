@@ -15,7 +15,7 @@ export default function WhyMK() {
       id="milton-keynes"
       ref={ref}
       aria-labelledby="mk-heading"
-      className="on-lime relative overflow-hidden bg-lime px-5 py-24 text-on-lime md:px-10 md:py-40"
+      className="on-blue relative overflow-hidden bg-blue px-5 py-24 text-on-blue md:px-10 md:py-40"
     >
       {/* Oversized outline "MK" drifts sideways with scroll: place gets the scale it deserves. */}
       <motion.div

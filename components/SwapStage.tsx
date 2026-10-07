@@ -17,10 +17,10 @@ type Item = { id: string; name: string; Icon: Icon; tone: string };
 
 /** Even slots (0, 2, 4) are "yours", odd slots (1, 3, 5) are "nearby". */
 const INITIAL: Item[] = [
-  { id: "lamp", name: "Desk lamp", Icon: Lamp, tone: "bg-lime text-on-lime" },
-  { id: "guitar", name: "Acoustic guitar", Icon: Guitar, tone: "bg-panel text-on-panel" },
-  { id: "bike", name: "Kids\u2019 bike", Icon: Bicycle, tone: "bg-panel text-on-panel" },
-  { id: "plants", name: "Herb planters", Icon: Plant, tone: "bg-lime text-on-lime" },
+  { id: "lamp", name: "Desk lamp", Icon: Lamp, tone: "bg-blue text-on-blue" },
+  { id: "guitar", name: "Acoustic guitar", Icon: Guitar, tone: "bg-gold text-on-gold" },
+  { id: "bike", name: "Kids\u2019 bike", Icon: Bicycle, tone: "bg-gold text-on-gold" },
+  { id: "plants", name: "Herb planters", Icon: Plant, tone: "bg-blue text-on-blue" },
   { id: "books", name: "Paperbacks", Icon: Books, tone: "bg-paper-2 text-ink" },
   { id: "headphones", name: "Headphones", Icon: Headphones, tone: "bg-paper-2 text-ink" },
 ];

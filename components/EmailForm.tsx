@@ -70,7 +70,7 @@ export default function EmailForm() {
           aria-invalid={status === "error"}
           aria-describedby="email-help"
           disabled={status === "sending" || status === "done"}
-          className="min-h-14 flex-1 rounded-full border-2 border-on-panel bg-paper px-6 text-base text-ink placeholder:text-muted focus-visible:outline-lime focus-visible:outline-offset-2"
+          className="min-h-14 flex-1 rounded-full border-2 border-on-gold bg-paper px-6 text-base text-ink placeholder:text-muted focus-visible:outline-blue focus-visible:outline-offset-2"
         />
         {/* Honeypot, hidden from people and assistive tech. */}
         <input
@@ -84,7 +84,7 @@ export default function EmailForm() {
         <button
           type="submit"
           disabled={status === "sending" || status === "done"}
-          className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-lime px-7 font-semibold whitespace-nowrap text-on-lime transition-transform duration-150 ease-[var(--ease-out)] enabled:active:scale-[0.97] disabled:opacity-70"
+          className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-blue px-7 font-semibold whitespace-nowrap text-on-blue transition-transform duration-150 ease-[var(--ease-out)] enabled:active:scale-[0.97] disabled:opacity-70"
         >
           {status === "done" ? (
             <>
@@ -103,7 +103,7 @@ export default function EmailForm() {
       <p
         id="email-help"
         role={status === "error" ? "alert" : "status"}
-        className={`mt-3 min-h-6 text-sm ${status === "error" ? "font-semibold text-lime underline decoration-wavy underline-offset-4" : "text-on-panel-muted"}`}
+        className={`mt-3 min-h-6 text-sm ${status === "error" ? "font-semibold text-on-gold underline decoration-wavy underline-offset-4" : "text-on-gold/80"}`}
       >
         {message || (
           <>

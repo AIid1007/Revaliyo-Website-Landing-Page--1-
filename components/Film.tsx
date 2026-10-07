@@ -48,7 +48,7 @@ export default function Film() {
       <div ref={wrap} className="mx-auto max-w-[1400px]">
         <div
           ref={frame}
-          className="on-dark relative aspect-[4/5] w-full overflow-hidden rounded-[28px] bg-panel text-on-panel will-change-transform sm:aspect-[16/10] lg:aspect-video"
+          className="on-dark relative aspect-[4/5] w-full overflow-hidden rounded-[28px] bg-gold text-on-gold will-change-transform sm:aspect-[16/10] lg:aspect-video"
         >
           {playing && hasFilm ? (
             <iframe
@@ -82,7 +82,7 @@ export default function Film() {
                     disabled={!hasFilm}
                     onClick={() => setPlaying(true)}
                     aria-label="Play the explainer film"
-                    className="group grid h-20 w-20 shrink-0 place-items-center rounded-full bg-lime text-on-lime transition-transform duration-200 ease-[var(--ease-out)] enabled:hover:scale-105 enabled:active:scale-95 disabled:cursor-not-allowed md:h-28 md:w-28"
+                    className="group grid h-20 w-20 shrink-0 place-items-center rounded-full bg-blue text-on-blue transition-transform duration-200 ease-[var(--ease-out)] enabled:hover:scale-105 enabled:active:scale-95 disabled:cursor-not-allowed md:h-28 md:w-28"
                   >
                     <Play size={36} weight="fill" aria-hidden />
                   </button>

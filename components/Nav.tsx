@@ -74,7 +74,7 @@ export default function Nav() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((o) => !o)}
-            className="relative z-50 grid h-11 w-11 place-items-center rounded-full bg-ink text-paper transition-transform duration-150 active:scale-95 md:hidden"
+            className="relative z-50 grid h-11 w-11 place-items-center rounded-full bg-gold text-on-gold transition-transform duration-150 active:scale-95 md:hidden"
           >
             {open ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />}
           </button>
@@ -89,7 +89,7 @@ export default function Nav() {
             animate={{ clipPath: "circle(150% at calc(100% - 2.25rem) 2rem)" }}
             exit={reduce ? undefined : { clipPath: "circle(0% at calc(100% - 2.25rem) 2rem)" }}
             transition={{ duration: 0.45, ease: [0.77, 0, 0.175, 1] }}
-            className="on-lime fixed inset-0 z-30 flex flex-col justify-end bg-lime px-5 pb-12 text-on-lime md:hidden"
+            className="on-blue fixed inset-0 z-30 flex flex-col justify-end bg-blue px-5 pb-12 text-on-blue md:hidden"
           >
             <ul className="flex flex-col gap-2">
               {NAV_LINKS.map((l, i) => (

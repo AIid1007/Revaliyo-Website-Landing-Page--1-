@@ -139,7 +139,7 @@ export default function HowItWorks() {
                 <div className="lg:col-span-6">
                   <span
                     aria-hidden
-                    className="display block text-[clamp(7rem,30vw,10rem)] text-lime [-webkit-text-stroke:2px_var(--ink)] lg:text-[clamp(8rem,18vw,17rem)]"
+                    className="display block text-[clamp(7rem,30vw,10rem)] text-blue [-webkit-text-stroke:2px_var(--ink)] lg:text-[clamp(8rem,18vw,17rem)]"
                   >
                     {s.n}
                   </span>
