@@ -26,15 +26,6 @@ All in `lib/config.ts` unless noted:
 `hiw-collect.jpg` is the neighbour-handover photo supplied by the client.
 Update the alt text in `components/HowItWorks.tsx` if you change any of them.
 
-## Copy still marked `[TBC: ...]` on the page
-
-Search for `<Tbc>` in `components/FAQ.tsx`:
-
-- Any fees on selling?
-- Can users edit or reject the AI value?
-- Final banned-items list
-- How many days until the voucher arrives
-
 ## Copy changes made to the brief
 
 - Voucher rule is **3 items** everywhere (the brief said 5 in one place, 3 in another).

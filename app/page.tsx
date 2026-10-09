@@ -7,7 +7,6 @@ import HowItWorks from "@/components/HowItWorks";
 import Nav from "@/components/Nav";
 import OfferStrip from "@/components/OfferStrip";
 import SmoothScroll from "@/components/SmoothScroll";
-import WhyMK from "@/components/WhyMK";
 
 export default function Page() {
   return (
@@ -25,7 +24,6 @@ export default function Page() {
         <Film />
         <OfferStrip />
         <HowItWorks />
-        <WhyMK />
         <Founder />
         <FAQ />
       </main>

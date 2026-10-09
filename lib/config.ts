@@ -37,6 +37,5 @@ export const SUBSCRIBE = {
 
 export const NAV_LINKS = [
   { label: "How it works", href: "#how-it-works" },
-  { label: "Milton Keynes", href: "#milton-keynes" },
   { label: "FAQ", href: "#faq" },
 ] as const;

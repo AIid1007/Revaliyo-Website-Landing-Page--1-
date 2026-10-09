@@ -34,6 +34,7 @@ export default function Founder() {
   return (
     <section
       ref={ref}
+      id="founder"
       aria-label="From the founder"
       className="mx-auto max-w-[1400px] px-5 py-28 md:px-10 md:py-44"
     >
