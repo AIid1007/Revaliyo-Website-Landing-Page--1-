@@ -113,10 +113,10 @@ export default function HowItWorks() {
             ))}
           </div>
           <a
-            href="#founder"
+            href="#safety"
             onClick={(e) => {
               e.preventDefault();
-              scrollToHash("#founder");
+              scrollToHash("#safety");
             }}
             className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-ink px-5 py-2.5 text-sm font-semibold transition-colors duration-150 hover:bg-ink hover:text-paper active:scale-[0.97]"
           >
