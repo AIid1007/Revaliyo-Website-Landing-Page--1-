@@ -19,12 +19,12 @@ const geist = localFont({
 export const metadata: Metadata = {
   title: "Revaliyo | Swap what you don't use, locally",
   description:
-    "Revaliyo is a new local app. Swap the things you don't use for things you actually want, and reduce landfill at the same time. Starting in Milton Keynes.",
+    "Revaliyo is a new local app. Swap the things you don't use for things you actually want, and reduce landfill at the same time.",
   applicationName: "Revaliyo",
   openGraph: {
-    title: "Is your home full of clutter?",
+    title: "Is your home full of unused treasures?",
     description:
-      "Swap the things you don't use for things you actually want. Starting in Milton Keynes.",
+      "Swap the things you don't use for things you actually want.",
     type: "website",
     locale: "en_GB",
     siteName: "Revaliyo",
