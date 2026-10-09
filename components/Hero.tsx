@@ -37,10 +37,10 @@ export default function Hero() {
       className="relative mx-auto grid min-h-[100dvh] max-w-[1400px] items-center gap-10 px-5 pb-16 pt-24 md:px-10 lg:grid-cols-12 lg:gap-8 lg:pt-20"
     >
       <div className="lg:col-span-8">
-        <h1 className="display text-[clamp(3.1rem,11.5vw,8rem)] lg:text-[min(7.9vw,7.25rem)]">
-          <Line delay={0.1}>Is your home</Line>
+        <h1 className="display text-[clamp(2.5rem,9.4vw,6.5rem)] lg:text-[min(6.1vw,5.8rem)]">
+          <Line delay={0.1}>Is your home full of</Line>
           <Line delay={0.2}>
-            full of <span className="mark">clutter?</span>
+            <span className="mark">unused treasures?</span>
           </Line>
         </h1>
 

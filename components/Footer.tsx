@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="on-gold mx-auto max-w-[1400px] overflow-hidden rounded-[28px] bg-gold px-6 pb-8 pt-16 text-on-gold md:px-12 md:pt-24">
         <div className="grid gap-14 lg:grid-cols-[1.25fr_1fr] lg:gap-10">
           <div>
-            <h2 className="display text-[clamp(2.6rem,6.4vw,6rem)]">
-              Swap the things you don&rsquo;t use.
+            <h2 className="display text-[clamp(2.2rem,5.2vw,4.75rem)]">
+              Swap or give away things you don&rsquo;t use.
             </h2>
             <div className="mt-8">
               <StoreButtons tone="blue" />

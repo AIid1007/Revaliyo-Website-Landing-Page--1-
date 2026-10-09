@@ -46,15 +46,6 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
     ),
   },
   {
-    q: "Do I have to live in Milton Keynes?",
-    a: (
-      <>
-        No, but you&rsquo;ll see the most on Revaliyo if you&rsquo;re in or near MK. Outside
-        MK? Join the waitlist below.
-      </>
-    ),
-  },
-  {
     q: "How do I claim the voucher?",
     a: (
       <>
@@ -62,18 +53,6 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
         <Tbc>within X days</Tbc>.{" "}
         <a href={LINKS.terms} className={linkCls}>
           Full T&amp;Cs
-        </a>
-        .
-      </>
-    ),
-  },
-  {
-    q: "What happens to my data?",
-    a: (
-      <>
-        We only use your data to run Revaliyo, and we never sell it.{" "}
-        <a href={LINKS.privacy} className={linkCls}>
-          Read our Privacy Policy
         </a>
         .
       </>

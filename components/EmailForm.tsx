@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Check } from "@phosphor-icons/react";
-import { LINKS, SUBSCRIBE } from "@/lib/config";
+import { SUBSCRIBE } from "@/lib/config";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -51,7 +51,7 @@ export default function EmailForm() {
   return (
     <form onSubmit={onSubmit} noValidate className="w-full max-w-xl">
       <label htmlFor="email" className="display block text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.05] tracking-[-0.02em]">
-        Want more updates? Share your email for spam-free updates.
+        Get early access to rewards &amp; app updates. No spam.
       </label>
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
@@ -105,15 +105,7 @@ export default function EmailForm() {
         role={status === "error" ? "alert" : "status"}
         className={`mt-3 min-h-6 text-sm ${status === "error" ? "font-semibold text-on-gold underline decoration-wavy underline-offset-4" : "text-on-gold/80"}`}
       >
-        {message || (
-          <>
-            See our{" "}
-            <a href={LINKS.privacy} className="underline underline-offset-2">
-              Privacy Policy
-            </a>
-            .
-          </>
-        )}
+        {message}
       </p>
     </form>
   );
