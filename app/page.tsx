@@ -1,12 +1,13 @@
 import Film from "@/components/Film";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import Founder from "@/components/Founder";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Nav from "@/components/Nav";
 import OfferStrip from "@/components/OfferStrip";
+import Safety from "@/components/Safety";
 import SmoothScroll from "@/components/SmoothScroll";
+import WhySwap from "@/components/WhySwap";
 
 export default function Page() {
   return (
@@ -21,10 +22,11 @@ export default function Page() {
       <Nav />
       <main id="main" tabIndex={-1}>
         <Hero />
-        <Film />
         <OfferStrip />
         <HowItWorks />
-        <Founder />
+        <Safety />
+        <WhySwap />
+        <Film />
         <FAQ />
       </main>
       <Footer />
