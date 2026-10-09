@@ -4,19 +4,11 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Plus } from "@phosphor-icons/react";
-import { LINKS } from "@/lib/config";
-import Tbc from "./Tbc";
-
-const linkCls = "font-semibold underline decoration-2 underline-offset-4";
 
 const FAQS: { q: string; a: React.ReactNode }[] = [
   {
     q: "Is Revaliyo free?",
-    a: (
-      <>
-        Yes. Revaliyo is free to download and free to swap. <Tbc>any fees on selling?</Tbc>
-      </>
-    ),
+    a: <>Yes. Revaliyo is free to download and free to swap &amp; giveaway.</>,
   },
   {
     q: "How does the AI value my items?",
@@ -24,7 +16,7 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
       <>
         It looks at your photos and details such as brand, type and condition, then compares
         similar items to suggest a fair value. It&rsquo;s a guide to help both people agree a
-        swap. <Tbc>can users edit or reject the value?</Tbc>
+        swap or giveaway.
       </>
     ),
   },
@@ -37,26 +29,13 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
     a: (
       <>
         Weapons, counterfeit goods, food, medicines, recalled or unsafe items, and anything
-        illegal to sell in the UK. <Tbc>confirm final list</Tbc>{" "}
-        <a href={LINKS.bannedItems} className={linkCls}>
-          See the full list
-        </a>
-        .
+        illegal to sell in the UK.
       </>
     ),
   },
   {
     q: "How do I claim the voucher?",
-    a: (
-      <>
-        List 3 items that pass review. Your voucher arrives by email{" "}
-        <Tbc>within X days</Tbc>.{" "}
-        <a href={LINKS.terms} className={linkCls}>
-          Full T&amp;Cs
-        </a>
-        .
-      </>
-    ),
+    a: <>List 3 items that pass review. Your voucher arrives by email within 3 days.</>,
   },
 ];
 
